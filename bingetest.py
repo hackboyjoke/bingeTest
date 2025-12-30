@@ -76,7 +76,10 @@ class BingeTest:
         print(f"Total tests: {len(self.tests)}")
         print(f"Passed: {self.passed}")
         print(f"Failed: {self.failed}")
-        print(f"Success rate: {(self.passed / len(self.tests) * 100):.1f}%")
+        if len(self.tests) > 0:
+            print(f"Success rate: {(self.passed / len(self.tests) * 100):.1f}%")
+        else:
+            print(f"Success rate: N/A (no tests run)")
         print(f"{'='*60}\n")
 
 
